@@ -1,0 +1,13 @@
+{
+  "name": "viem",
+  "version": "0.0.0",
+  "private": true,
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "viem": "^1.10.9"
+  },
+  "devDependencies": {
+    "bun-types": "^0.5.0"
+  }
+}
