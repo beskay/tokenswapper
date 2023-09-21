@@ -4,6 +4,8 @@ Simple script to swap ETH for ERC20 tokens. Supports Uniswap V2 and V3.
 
 Slippage is set to infinity.
 
+The script simulates the transaction before sending it, if the simulation fails the corresponding error is shown and the execution stops, so you won't lose gas due to failed transactions.
+
 v2 swap calls `swapExactETHForTokens` and v3 swap calls `exactInputSingle`.
 
 ## Pre-requisites
@@ -38,13 +40,15 @@ Shorthand:
 bun run swap.ts v2|v3 -t <token_address> -a <amount_in_eth> -p <privatekey>
 ```
 
-Example v2 swap:
+### Examples
+
+v2 swap:
 
 ```bash
 bun run swap.ts v2 --token 0x6982508145454Ce325dDbE47a25d4ec3d2311933 --amount 0.1 --pkey 0x736bd502819cd843c8d463cf5a50e5e2afa2362fdc5eb48867940b876919052a
 ```
 
-Example v3 swap:
+v3 swap:
 
 ```bash
 bun run swap.ts v3 -t 0x6982508145454Ce325dDbE47a25d4ec3d2311933 -a 0.1 -p 0x736bd502819cd843c8d463cf5a50e5e2afa2362fdc5eb48867940b876919052a
@@ -53,7 +57,6 @@ bun run swap.ts v3 -t 0x6982508145454Ce325dDbE47a25d4ec3d2311933 -a 0.1 -p 0x736
 Before executing the swap the script asks for confirmation, example:
 
 ```
-
 Selected Uniswap V2...
 
 Swapping ETH for token 0x6982508145454Ce325dDbE47a25d4ec3d2311933
