@@ -4,6 +4,8 @@ Simple script to swap ETH for ERC20 tokens. Supports Uniswap V2 and V3.
 
 Slippage is set to infinity.
 
+v2 swap calls `swapExactETHForTokens` and v3 swap calls `exactInputSingle`.
+
 ## Pre-requisites
 
 - [Bun](https://bun.sh/)
@@ -39,19 +41,19 @@ bun run swap.ts v2|v3 -t <token_address> -a <amount_in_eth> -p <privatekey>
 Example v2 swap:
 
 ```bash
-bun run swap.ts v2 --token 0x089453742936dd35134383aee9d78bee63a69b01 --amount 0.1 --pkey 0x736bd502819cd843c8d463cf5a50e5e2afa2362fdc5eb48867940b876919052a
+bun run swap.ts v2 --token 0x6982508145454Ce325dDbE47a25d4ec3d2311933 --amount 0.1 --pkey 0x736bd502819cd843c8d463cf5a50e5e2afa2362fdc5eb48867940b876919052a
 ```
 
 Example v3 swap:
 
 ```bash
-bun run swap.ts v3 -t 0x089453742936dd35134383aee9d78bee63a69b01 -a 0.1 --p 0x736bd502819cd843c8d463cf5a50e5e2afa2362fdc5eb48867940b876919052a
+bun run swap.ts v3 -t 0x6982508145454Ce325dDbE47a25d4ec3d2311933 -a 0.1 --p 0x736bd502819cd843c8d463cf5a50e5e2afa2362fdc5eb48867940b876919052a
 ```
 
 Before executing the swap the script asks for confirmation, example:
 
 ```
-Swapping ETH for token 0x089453742936dd35134383aee9d78bee63a69b01 using Uniswap V2...
+Swapping ETH for token 0x6982508145454Ce325dDbE47a25d4ec3d2311933 using Uniswap V2...
 Input amount in ETH: 1000000000000000
 Recipient: 0xE2be2C8B1c7ea0d5e5ed0DCFc4015Aa531d01EDa
 
