@@ -47,14 +47,17 @@ bun run swap.ts v2 --token 0x6982508145454Ce325dDbE47a25d4ec3d2311933 --amount 0
 Example v3 swap:
 
 ```bash
-bun run swap.ts v3 -t 0x6982508145454Ce325dDbE47a25d4ec3d2311933 -a 0.1 --p 0x736bd502819cd843c8d463cf5a50e5e2afa2362fdc5eb48867940b876919052a
+bun run swap.ts v3 -t 0x6982508145454Ce325dDbE47a25d4ec3d2311933 -a 0.1 -p 0x736bd502819cd843c8d463cf5a50e5e2afa2362fdc5eb48867940b876919052a
 ```
 
 Before executing the swap the script asks for confirmation, example:
 
 ```
-Swapping ETH for token 0x6982508145454Ce325dDbE47a25d4ec3d2311933 using Uniswap V2...
-Input amount in ETH: 1000000000000000
+
+Selected Uniswap V2...
+
+Swapping ETH for token 0x6982508145454Ce325dDbE47a25d4ec3d2311933
+Input amount in ETH: 0.001
 Recipient: 0xE2be2C8B1c7ea0d5e5ed0DCFc4015Aa531d01EDa
 
 Do you want to continue? (y/n)
